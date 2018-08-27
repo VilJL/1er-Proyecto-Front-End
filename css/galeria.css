@@ -1,0 +1,95 @@
+
+body {
+  padding-top: 73px;
+  background: url(../img/popcorn.jpg)no-repeat;
+}
+
+.navbar-brand{
+  font-family: 'Bangers', cursive;
+}
+
+.modal-title{
+  font-family: 'Bangers', cursive;
+  text-align: center;
+}
+
+.form-register{
+  width: 95%;
+  max-width:500px;
+  margin: auto;
+  background: white;
+  border-radius: 7px;
+}
+
+
+.contenedor-inputs{
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+input{
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+}
+
+.input-48{
+  width: 48%;
+}
+
+.input-100{
+  width: 100%;
+}
+
+.btn-enviar{
+  background: green;
+  color: #fff;
+  margin: auto;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+btn-enviar:active{
+  transform: scale(1.05);
+}
+
+.form__link{
+  width: 100%;
+  margin: 7px;
+  text-align: center;
+  font-size: 14px;
+}
+
+img {
+​    border: 1px solid;
+  border-radius: 5px;
+    padding: 1px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+
+.img-fluid {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  border: 1px solid black;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s /*infinite*/ 3;
+}
+
+
+@-webkit-keyframes mymove {
+    50% {border-top-left-radius: 150px;}
+}
+
+@keyframes mymove {
+    50% {border-top-left-radius: 150px;}
+  }
+
+#titulo1{
+  font-family: 'Bangers', cursive;
+
+}

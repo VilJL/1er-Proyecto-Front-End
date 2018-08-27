@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MovieTime</title>
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+
+
+
+	<!-- Navigation -->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top bb-1">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1 class="mb-0">MoVietime</h1></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Titulos</a>
+            </li>
+			
+			<!-- Search form -->
+
+            <li class="nav-item">
+            	<form class="form-inline active-cyan-4">
+					<input class="form-control mb-0" type="text" placeholder="Search" aria-label="Search">
+				</form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Sing Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid danger-color fluid-top text-center my-1">
+
+        <h5 id="titulo1">Favoritas de la semana</h5> 
+            
+    </div>
+
+    <header>
+
+		<!--Carousel Wrapper-->
+
+		<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+		    <!--Indicators-->
+		    <ol class="carousel-indicators">
+		        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+		        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+		        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+		    </ol>
+		    <!--/.Indicators-->
+
+		    <!--Slides-->
+		    <div class="carousel-inner" role="listbox">
+
+		        <!--First slide-->
+		        <div id="carousel1" class="carousel-item active" style="background-image: url('img/1511987433-capturabknb.jpg')">
+		        	<div class="carousel-caption d-none d-md-block">
+					    <h4>Avengers: Infinity War</h4>
+					 </div>
+		            
+		        </div>
+		        <!--/First slide-->
+
+		        <!--Second slide-->
+		        <div id="carousel1" class="carousel-item" style="background-image: url('img/cda91341881223.57b7dae9a3d15.png')">
+		        	<div class="carousel-caption d-none d-md-block">
+					    <h4>Rogue One</h4>
+					    
+					</div>
+		            
+		        </div>
+		        <!--/Second slide-->
+
+		        <!--Third slide-->
+		        <div id="carousel1" class="carousel-item" style="background-image: url('img/image-2018-07-10.png')">
+		            <div class="carousel-caption d-none d-md-block">
+					    <h4>Arrival</h4>
+					    
+					</div>
+		        </div>
+		        <!--/Third slide-->
+
+		    </div>
+
+		    <!--/.Slides-->
+
+		    <!--Controls-->
+		    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+		        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		        <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+		        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		        <span class="sr-only">Next</span>
+		    </a>
+		    <!--/.Controls-->
+		</div>
+
+		<!--/.Carousel Wrapper-->
+    </header>
+
+
+
+
+    <!-- Page Content -->
+
+    <div class="container bg-dark">
+
+    	<div class="row my-4">
+
+    		<div class="col-lg-3">
+
+				<!-- Navigation -->
+    			<div class="list-group mt-4" id="list-tab" role="tablist">
+    			  <div><li class="list-group-item mx-auto danger-color"><h4 class="mb-0 text-center">Categorías</h4></li></div>
+			      <a class="list-group-item list-group-item-dark list-group-item-action active" id="list-todas-list" data-toggle="list" href="#list-todas" role="tab" aria-controls="todas">Todas</a>
+			      <a class="list-group-item list-group-item-dark list-group-item-action" id="list-ciencia-list" data-toggle="list" href="#list-ciencia" role="tab" aria-controls="ciencia">Ciencia-Ficción</a>
+			      <a class="list-group-item list-group-item-dark list-group-item-action" id="list-accion-list" data-toggle="list" href="#list-accion" role="tab" aria-controls="accion">Acción</a>
+			      <a class="list-group-item list-group-item-dark list-group-item-action" id="list-comedia-list" data-toggle="list" href="#list-comedia" role="tab" aria-controls="comedia">Comedia</a>
+			      <a class="list-group-item list-group-item-dark list-group-item-action" id="list-drama-list" data-toggle="list" href="#list-drama" role="tab" aria-controls="drama">Drama</a>
+			      <a class="list-group-item list-group-item-dark list-group-item-action" id="list-terror-list" data-toggle="list" href="#list-terror" role="tab" aria-controls="terror">Terror</a>
+
+			    </div>
+			    <!-- Navigation -->
+    			
+    		</div>
+
+    		<div class="col-lg-9">
+
+    			<!-- Content -->
+			    <div class="tab-content" id="nav-tabContent">
+			      <div class="tab-pane fade show active" id="list-todas" role="tabpanel" aria-labelledby="list-todas-list">
+			      	
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster1.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Three Billboards Outside Ebbing, Missouri</h5>
+
+					    </div>
+					    
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster2.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Baby Driver</h5>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster3.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Avengers: Infinity War</h5>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster4.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Rogue One</h5>
+
+					    </div>
+					    
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster5.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Arrival</h5>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster6.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Isle of Dogs</h5>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster7.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">It (2017)</h5>
+
+					    </div>
+					    
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster8.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">The LEGO Batman Movie</h5>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster9.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h5 class="card-title">Lady Bird</h5>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+
+			      </div>
+
+
+
+			      <!-- Categorías -->
+
+			      <div class="tab-pane fade" id="list-ciencia" role="tabpanel" aria-labelledby="list-ciencia-list">
+			      	
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster4.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Rogue One</h4>
+
+					    </div>
+					    
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster5.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Arrival</h4>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4 bg-dark">
+
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+			      </div>
+
+			      <div class="tab-pane fade" id="list-accion" role="tabpanel" aria-labelledby="list-accion-list">
+			      	
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster3.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Avengers: Infinity War</h4>
+
+					    </div>
+					    
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster2.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Baby Driver</h4>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4 bg-dark">
+
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+			      </div>
+
+			      <div class="tab-pane fade" id="list-comedia" role="tabpanel" aria-labelledby="list-comedia-list">
+			      	
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster6.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Isle of Dogs</h4>
+
+					    </div>
+					    
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster8.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">The LEGO Batman Movie</h4>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+					  <!-- Card -->
+					  <div class="card mb-4 bg-dark">
+
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+			      </div>
+			      <div class="tab-pane fade" id="list-drama" role="tabpanel" aria-labelledby="list-drama-list">
+			      	
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster9.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Lady Bird</h4>
+
+					    </div>
+					    
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster1.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+					    <!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">Three Billboards Outside Ebbing, Missouri</h4>
+
+					    </div>
+
+					  </div>
+					  <!-- Card -->
+
+					  <!-- Card -->
+					  <div class="card mb-4 bg-dark">
+
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+			      </div>
+
+			      <div class="tab-pane fade" id="list-terror" role="tabpanel" aria-labelledby="list-terror-list">
+			      	
+					<!-- Card deck -->
+					<div class="card-deck my-4">
+
+					  <!-- Card -->
+					  <div class="card mb-4">
+
+					    <!--Card image-->
+					    <div class="view overlay">
+					      <img class="card-img-top" src="img/poster7.png" alt="Card image cap">
+					      <a href="#!">
+					        <div class="mask rgba-white-slight"></div>
+					      </a>
+					    </div>
+
+						<!--Card content-->
+					    <div class="card-body">
+
+					      <!--Title-->
+					      <h4 class="card-title">It (2017)</h4>
+
+					    </div>
+					    
+					  </div>
+					  <!-- Card -->
+					  <!-- Card -->
+					  <div class="card mb-4 bg-dark">
+
+
+					  </div>
+					  <!-- Card -->
+					  <!-- Card -->
+					  <div class="card mb-4 bg-dark">
+
+
+					  </div>
+					  <!-- Card -->
+
+					</div>
+					<!-- Card deck -->
+
+			      </div>
+			    </div>
+			    <!-- Content -->
+
+			</div>
+
+			<!-- /.container -->
+    			
+    	</div>
+
+    </div>
+
+		    <!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header px-auto bg-primary">
+		        <h4 class="modal-title black-text mx-auto py-0" id="exampleModalLabel"><strong>Registrar cuenta</strong></h4>
+		      </div>
+		      <div class="modal-body bg-dark">
+		        <form action="registrar.php" method="post" class="form-register" class="form-register" onsubmit="return validar();">
+			        
+			        <div class="contenedor-inputs bg-dark" >
+			          <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48" >
+			          <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48" >
+			          <input type="text" id="correo" name="correo" placeholder="Correo" class="input-100" >
+			          <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48" >
+			          <input type="password" id="clave" name="clave" placeholder="Contraseña" class="input-48" >
+			          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" class="input-100" >
+			          <input type="submit" value="Registrar" class="btn-enviar">
+			          <p class="form__link text-white">¿Ya tienen una cuenta? <a href="#">Ingrese aquí</a></p>
+			        </div>
+			    </form>
+		      </div>
+		      
+		    </div>
+		  </div>
+		</div>
+   
+       <!-- Footer -->
+    
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Creado por Jesus Lopez Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+ 
+
+
+	
+
+<script src="js/index.js"></script>
+<script src="js/validar.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+</body>
+</html>

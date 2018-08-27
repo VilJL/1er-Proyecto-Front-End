@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<title>MovieTime</title>
+	<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/galeria.css">
+
+
+    
+</head>
+<body>
+	<!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top bb-1">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1 class="mb-0">MoVieTime</h1></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galeria.html">Titulos</a>
+            </li>
+            <li class="nav-item">
+            	<form class="form-inline active-cyan-4">
+				    <!-- Search form -->
+					<input class="form-control mb-0" type="text" placeholder="Search" aria-label="Search">
+				</form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#exampleModal">Sing Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid danger-color fluid-top text-center my-1">
+
+        <h3 id="titulo1">Titulos disponibles</h3> 
+            
+    </div>
+
+    <section class="py-5 my-5">
+      <div class="container">
+          
+
+        <div class="card-columns" id="galeria">
+            
+<!-- código JavaScript -->
+          <script>
+            
+            var imagenes = [1,2,3,4,5,6,7,8,9];
+
+            
+            var galeria = document.getElementById('galeria');
+
+           
+            for(card of imagenes){
+
+            
+            galeria.innerHTML += `
+            <div class="card">
+                <a href="" data-toggle="modal" data-target="#id${card}">
+                    <img src="img/${card}.jpg" alt="" class="card-img-top">
+                </a>
+                  <div class="modal fade" id="id${card}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+     
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+         
+                        <img src="img/${card}.jpg" alt="rio con puente" class="img-fluid rounded" />
+                    </div>
+
+                  </div>
+            </div>
+            `
+            }
+
+          </script>
+
+
+        </div>
+      </div>
+    </section>
+    <!-- Fin del contenido de la pagina -->
+
+    <!-- Footer -->
+    
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Creado por Jesus Lopez Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+
+
+
+
+		    <!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header px-auto bg-primary">
+		        <h4 class="modal-title black-text mx-auto py-0" id="exampleModalLabel"><strong>Registrar cuenta</strong></h4>
+		      </div>
+		      <div class="modal-body bg-dark">
+		        <form action="registrar.php" method="post" class="form-register" class="form-register" onsubmit="return validar();">
+			        
+			        <div class="contenedor-inputs bg-dark" >
+			          <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48" >
+			          <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48" >
+			          <input type="text" id="correo" name="correo" placeholder="Correo" class="input-100" >
+			          <input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-48" >
+			          <input type="password" id="clave" name="clave" placeholder="Contraseña" class="input-48" >
+			          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" class="input-100" >
+			          <input type="submit" value="Registrar" class="btn-enviar">
+			          <p class="form__link text-white">¿Ya tienen una cuenta? <a href="#">Ingrese aquí</a></p>
+			        </div>
+			    </form>
+		      </div>
+		      
+		    </div>
+		  </div>
+		</div>
+
+
+
+
+<script src="js/index.js"></script>
+<script src="js/validar.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+</body>
+</html>
